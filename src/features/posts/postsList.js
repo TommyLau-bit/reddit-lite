@@ -1,35 +1,47 @@
-// Displays a list of posts fetched from the Reddit API.
-
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { loadPosts } from './postsSlice';
+import './PostsList.css';
 
+const DEFAULT_IMAGE = 'https://via.placeholder.com/80?text=No+Image';
 
-const PostsList = ({ subreddit = 'reactjs' }) => {
+const PostsList = ({ subreddit, posts: customPosts }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const posts = useSelector((state) => state.posts.posts);
   const isLoading = useSelector((state) => state.posts.isLoading);
-  const hasError = useSelector((state) => state.posts.hasError);
-  const errorMessage = useSelector((state) => state.posts.errorMessage);
 
   useEffect(() => {
-    dispatch(loadPosts(subreddit));
-  }, [dispatch, subreddit]);
+    if (!customPosts && subreddit) {
+      dispatch(loadPosts(subreddit));
+    }
+  }, [dispatch, subreddit, customPosts]);
 
   if (isLoading) {
-    return <div className="loading">Loading...</div>;
+    return <div>Loading...</div>;
   }
 
-  if (hasError) {
-    return <div className="error">{errorMessage}</div>;
-  }
+  const postsToRender = customPosts || posts;
 
   return (
     <div className="posts-list">
-      {posts.map((post) => (
-        <div key={post.id} className="post">
-          <h3>{post.title}</h3>
-          <p>By {post.author}</p>
+      {postsToRender.map((post) => (
+        <div
+          key={post.id}
+          className="post"
+          onClick={() => navigate(`/post/${post.id}`)}
+        >
+          <div className="post-thumbnail">
+            <img
+              src={post.thumbnail && post.thumbnail.startsWith('http') ? post.thumbnail : DEFAULT_IMAGE}
+              alt={post.title}
+            />
+          </div>
+          <div className="post-content">
+            <h3>{post.title}</h3>
+            <p>By {post.author}</p>
+          </div>
         </div>
       ))}
     </div>

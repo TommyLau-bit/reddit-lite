@@ -4,29 +4,21 @@
 	•	Examples:
 	•	fetchPosts: Fetches posts from a subreddit.
 	•	fetchComments: Fetches comments for a specific post. */
+    import axios from 'axios';
 
-import axios from 'axios';
-
-const BASE_URL = 'https://www.reddit.com';
-const cache = {}; // Simple in-memory cache
-
-// Fetch posts from a subreddit
-export const fetchPosts = async (subreddit) => {
-  // Check the cache first
-  if (cache[subreddit]) {
-    return cache[subreddit];
-  }
-
-  try {
-    const response = await axios.get(`${BASE_URL}/r/${subreddit}/.json`);
-    const posts = response.data.data.children.map((child) => child.data);
+    const BASE_URL = 'https://www.reddit.com';
+    const cache = {};
     
-    // Cache the results
-    cache[subreddit] = posts;
-
-    return posts;
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    throw new Error('Failed to fetch posts. Please try again later.');
-  }
-};
+    export const fetchPosts = async (subreddit) => {
+      if (cache[subreddit]) return cache[subreddit];
+    
+      const response = await axios.get(`${BASE_URL}/r/${subreddit}/.json`);
+      const posts = response.data.data.children.map((child) => child.data);
+      cache[subreddit] = posts; // Cache results
+      return posts;
+    };
+    
+    export const searchPosts = async (query) => {
+      const response = await axios.get(`${BASE_URL}/search.json?q=${query}`);
+      return response.data.data.children.map((child) => child.data);
+    };

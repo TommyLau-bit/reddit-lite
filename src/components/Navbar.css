@@ -1,13 +1,63 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out the heading and search bar */
     align-items: center;
     padding: 10px 20px;
     background-color: #ff4500;
     color: white;
   }
   
-  .navbar input {
-    padding: 5px;
-    font-size: 16px;
+  .navbar h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Search bar container */
+  .search-bar {
+    position: relative; /* For dropdown positioning */
+    width: 300px; /* Adjust width */
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px; /* Curved edges */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: white; /* Matches Reddit theme */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Glow effect */
+  }
+  
+  /* Dropdown styles */
+.dropdown {
+    position: absolute;
+    top: 100%; /* Below the search bar */
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px; /* Limit dropdown height */
+    overflow-y: auto; /* Scroll if too many items */
+    padding: 10px 0;
+    color: black; /* Set default text color */
+  }
+  
+  /* Dropdown items */
+  .dropdown li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black; /* Ensure text color is visible */
+  }
+  
+  .dropdown li:hover {
+    background-color: #f6f7f8;
   }

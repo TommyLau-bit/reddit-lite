@@ -1,0 +1,100 @@
+/* Container for the list of posts */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between posts */
+    padding: 20px;
+    background-color: #f6f7f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Individual post container */
+  .post {
+    display: flex; /* Flexbox layout to align thumbnail and content */
+    align-items: flex-start; /* Align thumbnail and content at the top */
+    gap: 15px; /* Space between thumbnail and content */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .post:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  /* Post thumbnail container */
+
+.post-thumbnail {
+    flex-shrink: 0; /* Prevent the thumbnail from shrinking */
+    width: 80px; /* Fixed width for the thumbnail */
+    height: 80px; /* Fixed height for the thumbnail */
+    border-radius: 8px; /* Rounded corners for the thumbnail */
+    overflow: hidden; /* Hide overflow for consistent appearance */
+    background-color: #ddd; /* Default background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-thumbnail img {
+    width: 100%; /* Scale the image to fit the container */
+    height: 100%; /* Maintain aspect ratio inside the container */
+    object-fit: cover; /* Ensure the image covers the thumbnail area */
+  }
+  
+  .no-thumbnail {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Post content container */
+  .post-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Post title */
+  .post-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Post author */
+  .post-content p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .posts-list {
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .post {
+      padding: 10px;
+      flex-direction: column; /* Stack thumbnail and content vertically */
+    }
+  
+    .post-thumbnail {
+      width: 100%; /* Make thumbnail full-width */
+      height: auto; /* Adjust height based on aspect ratio */
+    }
+  
+    .post-content h3 {
+      font-size: 16px;
+    }
+  
+    .post-content p {
+      font-size: 12px;
+    }
+  }

@@ -1,0 +1,101 @@
+/* Container for the search results page */
+.search-results {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 20px auto; /* Center the content */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for modern look */
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+  }
+  
+
+
+/* Heading style */
+.search-results h2 {
+    font-size: 32px; /* Larger text for emphasis */
+    font-weight: bold; /* Make the heading stand out */
+    color: #ff4500; /* Reddit's orange-red theme */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 1px; /* Add spacing between letters for readability */
+  
+    /* Add a fade-in animation */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Fade-in animation for the heading */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Highlight the query text */
+  .search-results .highlight {
+    color: #ffa500; /* A softer orange for contrast */
+    font-weight: bold; /* Emphasize the query */
+  }
+  
+  /* Loading message style */
+  .loading {
+    font-size: 20px;
+    text-align: center;
+    color: #666; /* Neutral text color */
+    padding: 40px;
+    font-style: italic;
+  }
+  
+  /* No results message style */
+  .no-results {
+    font-size: 18px;
+    text-align: center;
+    color: #999; /* Subtle text for no results */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for distinction */
+    border: 2px dashed #ddd; /* Dashed border for feedback */
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Posts list container */
+  .posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Individual post container */
+  .post {
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .post:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .post p {
+    font-size: 14px;
+    color: #777;
+  }

@@ -3,15 +3,20 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ subreddits, onSubredditSelect }) => {
   return (
     <div className="sidebar">
       <h3>Subreddits</h3>
       <ul>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>WebDev</li>
-        <li>Programming</li>
+        {subreddits.map((subreddit) => (
+          <li
+            key={subreddit}
+            onClick={() => onSubredditSelect(subreddit)}
+            className="sidebar-item"
+          >
+            {subreddit}
+          </li>
+        ))}
       </ul>
     </div>
   );
