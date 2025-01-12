@@ -1,3 +1,5 @@
+//Redux state for managing search terms and results.
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const searchSlice = createSlice({

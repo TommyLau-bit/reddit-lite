@@ -1,0 +1,19 @@
+.sidebar {
+    padding: 10px;
+    background: #f8f9fa;
+    border-right: 1px solid #ddd;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar li:hover {
+    text-decoration: underline;
+  }

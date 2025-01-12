@@ -1,0 +1,1 @@
+// 	Displays posts from a specific subreddit.

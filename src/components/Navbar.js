@@ -1,3 +1,5 @@
+// Displays the app logo, search bar, and user navigation.
+
 import React from 'react';
 
 const Navbar = () => {
