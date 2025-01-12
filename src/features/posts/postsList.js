@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadPosts } from './postsSlice';
-import './PostsList.css';
+
 
 const PostsList = ({ subreddit = 'reactjs' }) => {
   const dispatch = useDispatch();
