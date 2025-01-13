@@ -58,7 +58,7 @@ Steps
 	2.	Install Dependencies: npm install
 
     3.	Start the Development Server: npm start
-## The app will run locally at http://localhost:3000.
+# The app will run locally at http://localhost:3000.
 
     4.	Build for Production: npm run build
 
