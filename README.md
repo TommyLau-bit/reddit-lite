@@ -4,7 +4,8 @@ A Reddit Clone application built with React and Redux that mimics the core funct
 
 ## Features
 
-Core Functionalities
+Core Functionalities:
+
 	•	Browse Posts: View posts from a default subreddit or search for posts from specific subreddits.
 	•	Search: Search for content across Reddit using a built-in search bar.
 	•	Post Details: View detailed information about a post, including its comments.
@@ -13,7 +14,8 @@ Core Functionalities
 		    Upvote and downvote comments in the post details page.
 	•	Track Votes: A dedicated “My Votes” page displays all upvoted/downvoted posts and comments.
 
-Additional Features
+Additional Features:
+
 	•	Trending Suggestions: A dropdown menu in the search bar shows past searches or trending topics.
 	•	Responsive Design: Optimized for desktop and mobile devices.
 	•	Dynamic Commenting: Add comments to posts and view them alongside other user comments.
@@ -23,6 +25,7 @@ Additional Features
 
 
 ## Technologies Used
+
 	•	Frontend:
 		    React
 		    Redux
