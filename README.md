@@ -121,3 +121,8 @@ My Votes Page
   <br>
   <i>Figure 5: My Votes (Downvoted Posts) - View all posts and comments you have downvoted in a separate section.</i>
 </p>
+
+Author 👤
+
+Tommy Lau
+	•	GitHub: TommyLau-bit
