@@ -44,10 +44,12 @@ Additional Features
 Setup Instructions
 
 Prerequisites
+
 	•	Node.js and npm installed
 	•	A code editor (e.g., Visual Studio Code)
 
 Steps
+
 	1.	Clone the Repository: git clone https://github.com/TommyLau-bit/reddit-lite.git  cd reddit-clone-app
 
 	2.	Install Dependencies: npm install
