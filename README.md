@@ -1,8 +1,8 @@
-# Reddit Clone App
+## Reddit Clone App
 
 A Reddit Clone application built with React and Redux that mimics the core functionalities of Reddit. This project allows users to browse posts, search for content, view detailed posts with comments, upvote and downvote posts/comments, and track their votes on a dedicated “My Votes” page. The app leverages the Reddit JSON API to fetch live data and implements a modern, responsive design for an intuitive user experience.
 
-# Features
+## Features
 
 Core Functionalities
 	•	Browse Posts: View posts from a default subreddit or search for posts from specific subreddits.
@@ -22,7 +22,7 @@ Additional Features
 		    Smooth transitions and modern design elements.
 
 
-# Technologies Used
+## Technologies Used
 	•	Frontend:
 		    React
 		    Redux
@@ -40,7 +40,7 @@ Additional Features
 	    	ESLint & Prettier for code linting and formatting
 
         
-# Setup
+## Setup
 Setup Instructions
 
 Prerequisites
@@ -53,10 +53,10 @@ Steps
 	2.	Install Dependencies: npm install
 
     3.	Start the Development Server: npm start
-# The app will run locally at http://localhost:3000.
+## The app will run locally at http://localhost:3000.
     4.	Build for Production: npm run build
 
-# Features in Action
+## Features in Action
 
 Browse and Search
 	•	View posts from a default subreddit (e.g., reactjs).
@@ -74,7 +74,7 @@ My Votes Page
 	•	Organized layout showing upvoted/downvoted posts and comments.
 	•	Clickable links to navigate to individual posts.
 
-# Reddit Clone App
+## Reddit Clone App
 
 ## Features in Action
 
