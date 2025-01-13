@@ -1,8 +1,8 @@
-//	Redux state for loading posts.
-// Thunk for loading posts
+// Redux state for loading posts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchPosts } from '../../api/redditApi';
 
+// Thunk for loading posts
 export const loadPosts = createAsyncThunk(
   'posts/loadPosts',
   async (subreddit) => {
@@ -12,6 +12,7 @@ export const loadPosts = createAsyncThunk(
       title: post.title,
       author: post.author,
       thumbnail: post.thumbnail, // Include the thumbnail field
+      votes: post.votes || 0, // Initialize votes if not present
     }));
   }
 );
@@ -22,6 +23,15 @@ const postsSlice = createSlice({
     posts: [],
     isLoading: false,
     hasError: false,
+  },
+  reducers: {
+    updateVote: (state, action) => {
+      const { postId, type } = action.payload;
+      const post = state.posts.find((post) => post.id === postId);
+      if (post) {
+        post.votes = type === 'upvote' ? post.votes + 1 : post.votes - 1;
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -38,5 +48,8 @@ const postsSlice = createSlice({
       });
   },
 });
+
+// Export the `updateVote` action for dispatching in components
+export const { updateVote } = postsSlice.actions;
 
 export default postsSlice.reducer;

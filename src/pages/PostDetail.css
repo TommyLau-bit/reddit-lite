@@ -1,71 +1,173 @@
 /* Post detail container */
 .post-detail {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #ffffff; /* Clean white background */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
-    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   /* Post title */
   .post-detail h2 {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 10px;
     color: #222;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #ff4500; /* Accent underline for Reddit theme */
-    padding-bottom: 10px;
   }
   
-  /* Post author details */
-  .post-detail p {
-    font-size: 16px;
+ /* Votes section */
+.votes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .vote-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
     color: #555;
-    margin-bottom: 20px;
-    font-style: italic;
+    transition: color 0.2s;
   }
   
-  /* Post content area */
+  .vote-btn:hover {
+    color: #ff4500;
+  }
+  
+  .upvote-active {
+    color: green; /* Green for upvote */
+  }
+  
+  .downvote-active {
+    color: red; /* Red for downvote */
+  }
+  
+  .comment-votes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .comment-votes .vote-btn {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .comment-votes .vote-btn:hover {
+    color: #ff4500;
+  }
+  
+  .comment-votes .upvote-active {
+    color: green;
+  }
+  
+  .comment-votes .downvote-active {
+    color: red;
+  }
+  
+  /* Post content */
   .post-content {
     font-size: 18px;
     line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Add Comment button */
+  .add-comment-btn {
+    padding: 10px 15px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .add-comment-btn:hover {
+    background-color: #e63900;
   }
   
   /* Comments section */
   .comments {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   
   .comments h3 {
-    font-size: 24px;
-    color: #222;
+    font-size: 22px;
     margin-bottom: 15px;
+    color: #333;
   }
   
   .comment {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .comment:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f6f7f8;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
   .comment p {
     margin: 0;
-    font-size: 16px;
     color: #555;
   }
   
   .comment p:nth-child(2) {
     font-size: 14px;
     color: #777;
-    margin-top: 8px;
+    margin-top: 5px;
+  }
+  
+ 
+/* Highlight user comments */
+.user-comment {
+    background-color: #fff4d6; /* Light yellow background for visibility */
+    border-left: 4px solid #ffa500; /* Orange border to highlight user comments */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-comment .delete-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #ff4500;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .user-comment .delete-btn:hover {
+    color: #e63900;
+  }
+  
+  /* API Comments */
+  .comment-votes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .comment-votes button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s;
+  }
+  
+  .comment-votes button:hover {
+    color: #ff4500;
+  }
+  
+  .comment-votes span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
   }

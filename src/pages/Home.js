@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import PostsList from '../features/posts/PostsList';
 import { searchPosts } from '../api/redditApi';
 
-const Home = () => {
+const Home = ({ onVote }) => {
   const [subreddit, setSubreddit] = useState('reactjs');
   const [posts, setPosts] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -33,7 +33,7 @@ const Home = () => {
         ) : posts.length > 0 ? (
           <PostsList posts={posts} />
         ) : (
-          <PostsList subreddit={subreddit} />
+          <PostsList subreddit={subreddit} onVote={onVote} />
         )}
       </div>
     </div>

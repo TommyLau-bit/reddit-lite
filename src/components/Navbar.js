@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ onSearch }) => {
@@ -56,7 +56,13 @@ const Navbar = ({ onSearch }) => {
 
   return (
     <nav className="navbar">
-      <h1>Reddit Clone</h1>
+      <div className="navbar-container">
+        <h1>Reddit Clone</h1>
+        <div className="navbar-links">
+          <Link to="/">Home</Link>
+          <Link to="/my-votes">My Votes</Link>
+        </div>
+      </div>
       <div className="search-bar">
         <input
           type="text"
