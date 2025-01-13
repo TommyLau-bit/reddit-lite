@@ -62,18 +62,22 @@ Steps
 ## Features in Action
 
 Browse and Search
+
 	•	View posts from a default subreddit (e.g., reactjs).
 	•	Search for specific subreddits or topics.
 
 Post and Comment Details
+
 	•	View full post content with comments.
 	•	Add comments dynamically to any post.
 
 Upvote/Downvote
+
 	•	Highlighted buttons indicate active votes.
 	•	Votes are tracked on the “My Votes” page.
 
 My Votes Page
+
 	•	Organized layout showing upvoted/downvoted posts and comments.
 	•	Clickable links to navigate to individual posts.
 
