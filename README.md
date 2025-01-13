@@ -48,12 +48,13 @@ Prerequisites
 	•	A code editor (e.g., Visual Studio Code)
 
 Steps
-	1.	Clone the Repository: git clone https://github.com/TommyLau-bit/reddit-lite.git
-                              cd reddit-clone-app
+	1.	Clone the Repository: git clone https://github.com/TommyLau-bit/reddit-lite.git  cd reddit-clone-app
+
 	2.	Install Dependencies: npm install
 
     3.	Start the Development Server: npm start
 ## The app will run locally at http://localhost:3000.
+
     4.	Build for Production: npm run build
 
 ## Features in Action
