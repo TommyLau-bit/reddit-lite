@@ -138,7 +138,7 @@ My Votes Page
 <p align="center">
   <img src="./assets/SearchHistory.png" alt="Search History Screenshot" width="700"/>
   <br>
-  <i>Figure 4: Search History - Click on the search bar to see past searches and trending topics, enhancing user convenience and navigation.</i>
+  <i>Figure 6: Search History - Click on the search bar to see past searches and trending topics, enhancing user convenience and navigation.</i>
 </p>
 
 ---
@@ -147,7 +147,7 @@ My Votes Page
 <p align="center">
   <img src="./assets/VotesColor.png" alt="Vote Buttons Screenshot" width="700"/>
   <br>
-  <i>Figure 5: Vote Buttons - Clicking the upvote button highlights it in green, while clicking the downvote button highlights it in red, providing clear visual feedback.</i>
+  <i>Figure 7: Vote Buttons - Clicking the upvote button highlights it in green, while clicking the downvote button highlights it in red, providing clear visual feedback.</i>
 </p>
 
 ---
